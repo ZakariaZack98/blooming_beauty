@@ -1,1 +1,49 @@
-@import "tailwindcss"
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --navGreen: #FDFE9C;
+  --heroGreen: #A0C23E;
+}
+
+@font-face {
+  font-family: 'Sanggar';
+  src: url('/fonts/Sanggar.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-navGreen: var(--navGreen);
+  --font-lato: 'Lato', sans-serif;
+  --font-sanggar: 'Sanggar', serif;
+  --color-heroGreen: var(--heroGreen);
+}
+
+.hero {
+  background: rgb(24,35,0);
+  background: radial-gradient(circle, rgba(24,35,0,1) 29%, rgba(0,0,0,1) 71%); 
+}
+
+.gridOverlay {
+  transform: scale(1.1);
+  background-image: 
+    linear-gradient(to right, rgba(245, 245, 245, 0.034) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 245, 245, 0.068) 1px, transparent 1px);
+  background-size: 110px 110px;
+}
+
+.image-with-shadow {
+  filter: drop-shadow(20px 0px 10px rgba(0, 0, 0, 0.5));
+  height: 75dvh;
+  animation: slide-up 1s ease-out; 
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(15vh) scale(0.8) ; 
+  }
+  to {
+    transform: translateY(0) scale(1) ; 
+  }
+}
